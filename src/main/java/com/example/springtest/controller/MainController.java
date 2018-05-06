@@ -42,4 +42,9 @@ public class MainController {
 	public String someText() {
 		return "some-text";
 	}
+	
+	@GetMapping("/update")
+	public String updateProd() {
+		return "update-product";
+	}
 }

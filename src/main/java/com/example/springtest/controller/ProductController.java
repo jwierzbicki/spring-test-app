@@ -38,14 +38,12 @@ public class ProductController {
 		return productRepository.save(product);
 	}
 	
-	/*
 	// @PathVariable binds path variable {id} with method parameter id
 	@GetMapping("/{id}")
 	public Product getProductById(@PathVariable(value="id") Long id) { 
 		return productRepository.findById(id)
 				.orElseThrow(() -> new ResourceNotFoundException("Product", "id", id));
 	}
-	*/
 	
 	// Update a product
 	@PutMapping("/{id}")

@@ -46,11 +46,23 @@ $(document).ready(function() {
 					});
 				};
 				del.appendChild(delButton);
+				
+				let update = document.createElement('td');
+				let updateButton = document.createElement('input');
+				updateButton.type = 'button';
+				updateButton.value = 'Update';
+				updateButton.setAttribute('class', 'btn btn-info');
+				updateButton.onclick = function() {
+					localStorage.setItem('productid', prod.id);
+					window.location.href = 'http://localhost:8080/update';
+				};
+				update.appendChild(updateButton);
 
 				row.appendChild(id);
 				row.appendChild(name);
 				row.appendChild(cat);
 				row.appendChild(del);
+				row.appendChild(update);
 
 				$('#tableBody').append(row);
 			});

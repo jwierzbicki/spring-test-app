@@ -3,8 +3,8 @@ $(document).ready(function() {
 	$('#addButton').click(function() {
 
 		let formData = {};
-		let name = document.getElementById("name").value;
-		let category = document.getElementById("category").value;
+		let name = document.getElementById('name').value;
+		let category = document.getElementById('category').value;
 
 		formData.name = name;
 		formData.category = category;
