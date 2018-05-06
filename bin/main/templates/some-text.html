@@ -11,7 +11,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    <script src="js/productlist.js"></script>
+    <script src="/js/productlist.js"></script>
+    <script src="/js/productadd.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -31,38 +32,46 @@
 	<div class="container">
 		<ul class="nav nav-tabs" role="tablist">
 			<li class="nav-item">
-				<a class="nav-link active" data-toggle="tab" href="#products">Products</a>
+				<a class="nav-link active" data-toggle="tab" href="#listProducts">Products</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a>
+				<a class="nav-link" data-toggle="tab" href="#addProduct">Add Product</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
+				<a class="nav-link" data-toggle="tab" href="#menu3">Menu 3</a>
 			</li>
 		</ul>
 		<div class="tab-content text-light">
-			<div id="products" class="container tab-pane active"><br>
+			<div id="listProducts" class="container tab-pane active"><br>
 				<h3 class="text-center" style="margin: 20px; font-size: 35px;">Product list</h3>
-				<table id="productTable" class="table table-hover table-dark">
-					<tr class="thead-light">
-						<th>Id</th>
-						<th>Name</th>
-						<th>Category</th>
-					</tr>
+				<input type="button" id="refresh" class="btn btn-success" value="Refresh">
+				<table class="table table-hover table-dark">
+					<thead class="font-weight-bold">
+						<tr>
+							<td>Id</td>
+							<td>Name</td>
+							<td>Category</td>
+							<td>Action</td>
+						</tr>
+					</thead>
+					<tbody id="tableBody">
+					
+					</tbody>
 				</table>
 			</div>
-			<div id="menu1" class="container tab-pane fade"><br>
-				<h3>Menu 1</h3>
-				<!-- 
-				<form action='create-product' method="post">
-					<p>Name: <input type="text" th:field="*{name}"/></p>
-					<p>Category: <input type="text" th:field="*{category}"/></p>
-					<p><input class="btn btn-info" type="submit" value="Add"/> <input type="reset" value="Reset"/></p>
+			<div id="addProduct" class="container tab-pane fade"><br>
+				<h3>Add product</h3>
+				<p style="font-size: 12px">Both fields are required</p>
+				<form id="addProductForm">
+					<p>Name: <input type="text" id="name"/></p>
+					<p>Category: <input type="text" id="category"/></p>
+					<p><input id="addButton" class="btn btn-info" type="button" value="Add"/>
+						<input class="btn btn-danger" type="reset" value="Reset"/></p>
 				</form>
-				 -->
+
 			</div>
-			<div id="menu2" class="container tab-pane fade"><br>
-				<h3>Menu 2</h3>
+			<div id="menu3" class="container tab-pane fade"><br>
+				<h3>Menu 3</h3>
 				
 			</div>
 		</div>
